@@ -28,9 +28,9 @@ let mapleader = ","
 " Bind nohl
 " Removes highlight of your last search
 " ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+noremap <C-c> :nohl<CR>
+vnoremap <C-c> :nohl<CR>
+inoremap <C-c> :nohl<CR>
 
 
 " Quicksave command
@@ -131,6 +131,13 @@ set noswapfile
 " curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 " Now you can install any plugin into a .vim/bundle/plugin-name/ folder
 call pathogen#infect()
+
+
+" Setup The NERD Tree
+" git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+map <C-n> :NERDTreeToggle<CR>
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 " Setting custom indent colors
