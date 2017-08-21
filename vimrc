@@ -138,6 +138,7 @@ call pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeIgnore = ['\.pyc$']
 
 
 " Setting custom indent colors
@@ -159,6 +160,7 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
 
 
 " Settings for vim-javascript
