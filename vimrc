@@ -1,11 +1,16 @@
 " =============================================================================
 " ~/.vimrc
-" Last updated: August 21, 2017 by Abdullah Alharbi
+" Last updated: December 3, 2018 by Abdullah Alharbi
 " =============================================================================
 
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
+
+
+" Arabic support
+set encoding=utf-8
+set arabicshape
 
 
 " Better copy & paste
@@ -96,7 +101,11 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=233
 
 
-" easier formatting of paragraphs
+" Relative numbers
+set relativenumber
+
+
+" Easier formatting of paragraphs
 vmap Q gq
 nmap Q gqap
 
