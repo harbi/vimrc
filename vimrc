@@ -193,6 +193,12 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 
+" Syntax highlighting for Django templates
+" download django.vim from https://www.vim.org/scripts/script.php?script_id=1487
+" mkdir ~/.vim/syntax
+" mv django.vim ~/.vim/syntax
+
+
 " =============================================================================
 " Python IDE Setup
 " =============================================================================
