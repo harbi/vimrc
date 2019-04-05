@@ -1,6 +1,6 @@
 " =============================================================================
 " ~/.vimrc
-" Last updated: December 3, 2018 by Abdullah Alharbi
+" Last updated: April 5, 2019 by Abdullah Alharbi
 " =============================================================================
 
 
@@ -183,6 +183,14 @@ let g:javascript_plugin_flow = 1
 " git clone https://github.com/mxw/vim-jsx.git
 " Enable JSX syntax highlighting and indenting for files with the .js extension
 let g:jsx_ext_required = 0
+
+
+" Settings for emmet-vim
+" cd ~/.vim/bundle
+" git clone https://github.com/mattn/emmet-vim.git
+" Enable just for html/css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 
 " =============================================================================
