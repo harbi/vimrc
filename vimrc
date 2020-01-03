@@ -1,6 +1,6 @@
 " =============================================================================
 " ~/.vimrc
-" Last updated: April 5, 2019 by Abdullah Alharbi
+" Last updated: Januryay 3, 2020 by Abdullah Alharbi
 " =============================================================================
 
 
@@ -119,6 +119,9 @@ set undolevels=700
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 shiftround expandtab
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 shiftround expandtab
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 shiftround expandtab
+autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2 shiftround expandtab
+autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2 shiftround expandtab
+autocmd FileType scss setlocal tabstop=2 softtabstop=2 shiftwidth=2 shiftround expandtab
 
 
 " Make search case insensitive
@@ -148,6 +151,7 @@ map <C-n> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['^__pycache__$[[dir]]']
 
 
 " Setting custom indent colors
@@ -190,7 +194,7 @@ let g:jsx_ext_required = 0
 " git clone https://github.com/mattn/emmet-vim.git
 " Enable just for html/css
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,htmldjango,css EmmetInstall
 
 
 " Syntax highlighting for Django templates
