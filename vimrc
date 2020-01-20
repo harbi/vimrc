@@ -1,6 +1,6 @@
 " =============================================================================
 " ~/.vimrc
-" Last updated: January 3, 2020 by Abdullah Alharbi
+" Last updated: January 20, 2020 by Abdullah Alharbi
 " =============================================================================
 
 
@@ -194,7 +194,7 @@ let g:jsx_ext_required = 0
 " git clone https://github.com/mattn/emmet-vim.git
 " Enable just for html/css
 let g:user_emmet_install_global = 0
-autocmd FileType html,htmldjango,css EmmetInstall
+autocmd FileType html,htmldjango,css,javascript.jsx EmmetInstall
 
 
 " Syntax highlighting for Django templates
