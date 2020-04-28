@@ -1,6 +1,6 @@
 " =============================================================================
 " ~/.vimrc
-" Last updated: January 20, 2020 by Abdullah Alharbi
+" Last updated: April 28, 2020 by Abdullah Alharbi
 " =============================================================================
 
 
@@ -184,9 +184,8 @@ let g:javascript_plugin_flow = 1
 
 " Syntax highlighting and indenting for JSX
 " cd ~/.vim/bundle
-" git clone https://github.com/mxw/vim-jsx.git
-" Enable JSX syntax highlighting and indenting for files with the .js extension
-let g:jsx_ext_required = 0
+" git clone https://github.com/maxmellon/vim-jsx-pretty.git
+let g:vim_jsx_pretty_highlight_close_tag = 1
 
 
 " Settings for emmet-vim
@@ -194,7 +193,7 @@ let g:jsx_ext_required = 0
 " git clone https://github.com/mattn/emmet-vim.git
 " Enable just for html/css
 let g:user_emmet_install_global = 0
-autocmd FileType html,htmldjango,css,javascript.jsx EmmetInstall
+autocmd FileType html,htmldjango,css,javascript EmmetInstall
 
 
 " Syntax highlighting for Django templates
