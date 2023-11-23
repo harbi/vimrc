@@ -1,6 +1,6 @@
 " =============================================================================
 " ~/.vimrc
-" Last updated: July 10, 2020 by Abdullah Alharbi
+" Last updated: November 23, 2023 by Abdullah Alharbi
 " =============================================================================
 
 
@@ -97,7 +97,7 @@ set number  " show line numbers
 set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
-set colorcolumn=80
+set colorcolumn=88
 highlight ColorColumn ctermbg=233
 
 
@@ -214,6 +214,28 @@ autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
 " mv django.vim ~/.vim/syntax
 
 
+" Settings for vim-plug
+call plug#begin()
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+"   - Vim (Windows): '~/vimfiles/plugged'
+"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
+" You can specify a custom plugin directory by passing it as the argument
+"   - e.g. `call plug#begin('~/.vim/plugged')`
+"   - Avoid using standard Vim directory names like 'plugin'
+
+" Make sure you use single quotes
+
+" Black formatter (for Python)
+Plug 'psf/black', { 'branch': 'stable' }
+
+" Initialize plugin system
+" - Automatically executes `filetype plugin indent on` and `syntax enable`.
+call plug#end()
+" You can revert the settings after the call like so:
+"   filetype indent off   " Disable file-type-specific indentation
+"   syntax off            " Disable syntax highlighting
+
 " =============================================================================
 " Python IDE Setup
 " =============================================================================
@@ -222,7 +244,11 @@ autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
 " Settings for flake8
 " cd ~/.vim/bundle
 " git clone https://github.com/nvie/vim-flake8.git
-autocmd FileType python map <buffer> <Leader>f :call flake8#Flake8()<CR>
+" autocmd FileType python map <buffer> <Leader>f :call flake8#Flake8()<CR>
+
+
+" Settings for Black
+noremap <Leader>f :Black<CR>
 
 
 " Settings for vim-powerline
