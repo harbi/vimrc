@@ -1,6 +1,6 @@
 " =============================================================================
 " ~/.vimrc
-" Last updated: November 23, 2023 by Abdullah Alharbi
+" Last updated: January 27, 2024 by Abdullah Alharbi
 " =============================================================================
 
 
@@ -173,6 +173,7 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_flake8_post_args='--ignore=E501'
 let g:syntastic_python_pylint_args = "--load-plugins pylint_django"
 
 
